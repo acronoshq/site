@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ocultar barra de rolagem, mas permitir rolagem */
+body {
+    overflow: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 0px; /* Remover barra de rolagem no Chrome, Safari e Opera */
+    background: transparent; /* Opcional: fundo transparente */
+}
+
+body {
+    -ms-overflow-style: none; /* Remover barra de rolagem no IE e Edge */
+    scrollbar-width: none; /* Remover barra de rolagem no Firefox */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    z-index: 1000;
+    transition: top 0.3s;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.menu-icon {
+    
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    background-image: url('/menuicon.png');
+    width: 15px;
+    height: 3px;
+    
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    margin-top: 60px; /* Altura do header para evitar sobreposição */
+}
+
+.comic-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.comic-page img {
+    max-width: 100%;
+    height: auto;
+    cursor: zoom-in;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    nav ul li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul.show {
+        display: flex;
+    }
+}

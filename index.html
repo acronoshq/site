@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História em Quadrinhos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lightbox.css">
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <img src="menuicon.png" alt="Menu" class="menu-icon" id="menu-icon">
+            <ul id="menu">
+                <li><a href="#page1">Página 1</a></li>
+                <li><a href="#page2">Página 2</a></li>
+                <li><a href="#page3">Página 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="page1" class="comic-page">
+            <a href="pg1.jpg" data-lightbox="comic" data-title="Página 1">
+                <img src="pg1.jpg" alt="Página 1">
+            </a>
+        </section>
+        <section id="page2" class="comic-page">
+            <a href="pg2.jpg" data-lightbox="comic" data-title="Página 2">
+                <img src="pg2.jpg" alt="Página 2">
+            </a>
+        </section>
+        <section id="page3" class="comic-page">
+            <a href="pg3.jpg" data-lightbox="comic" data-title="Página 3">
+                <img src="pg3.jpg" alt="Página 3">
+            </a>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="lightbox.js"></script>
+</body>
+</html>
